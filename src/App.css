@@ -5,10 +5,12 @@
 }
 #pokedex-heading{
     margin: 0 auto;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-decoration: none;
 }
-a:visited{
+a{
     color: black;
-    text-decoration: none;
+}
+a:active{
+    color: blue;
 }
