@@ -12,14 +12,14 @@ function usePokemonDetails(id, pokemonName) {
                 response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
             }
             const pokemonOfSameTypes = await axios.get(`https://pokeapi.co/api/v2/type/${response.data.types ? response.data.types[0].type.name : ''}`)
-            console.log(response.data);
+            console.log("same",pokemonOfSameTypes);
             setPokemon({
                 name: response.data.name,
                 image: response.data.sprites.other.dream_world.front_default,
                 weight: response.data.weight,
                 height: response.data.height,
                 types: response.data.types.map((t) => t.type.name),
-                similarPokemons: pokemonOfSameTypes.data.pokemon.slice(0, 5)
+                similarPokemons: pokemonOfSameTypes.data.pokemon.slice(0, 7)
             });
         } catch (error) {
             console.log("something went wrong");

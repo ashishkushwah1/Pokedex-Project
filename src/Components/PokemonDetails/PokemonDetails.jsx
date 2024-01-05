@@ -18,7 +18,7 @@ const PokemonDetails = ({ pokemonName }) => {
       </div>
       {
         pokemon.types && pokemon.similarPokemons &&
-        <div>
+        <div className='similar-pokemons'>
           More {pokemon.types[0]} type pokemons:
           <ul>
             {pokemon.similarPokemons.map((p) =>
